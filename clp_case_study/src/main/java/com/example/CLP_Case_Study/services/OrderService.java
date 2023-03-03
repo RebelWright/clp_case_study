@@ -23,10 +23,12 @@ public class OrderService implements OrderServiceInterface {
 
     private final OrderRepository orderRepository;
     private final UserService userService;
+    private final UserRepository userRepository;
 
-    public OrderService(OrderRepository orderRepository, UserService userService) {
+    public OrderService(OrderRepository orderRepository, UserService userService, UserRepository userRepository) {
         this.orderRepository = orderRepository;
         this.userService = userService;
+        this.userRepository = userRepository;
     }
     public Optional<Order> findById(int id) {
         return orderRepository.findById(id);

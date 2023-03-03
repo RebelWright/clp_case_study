@@ -85,10 +85,11 @@ class OrderServiceTest {
         when(userRepository.findById(userId)).thenReturn(Optional.of(user));
 
         Order order = new Order();
-        when(orderRepository.save(Mockito.any(Order.class))).thenReturn(order);
+        order.setUser(user);
+        when(orderRepository.save(order)).thenReturn(order);
 
         // Act
-        Order result = orderService.createOrder(userId);
+        Order result = orderService.createOrder(1);
 
         // Assert
         assertNotNull(result);
@@ -112,8 +113,8 @@ class OrderServiceTest {
         // create user and order
         User user = new User(1,"test@test.com", "password", "John", "Doe", "url");
         Order testOrder = new Order();
-        //mockOrder.setUser(user);
-        //mockOrder = orderRepository.save(mockOrder);
+        testOrder.setUser(user);
+        testOrder = orderRepository.save(testOrder);
 
         //Order order = orderService.createOrder(1);
         when(orderService.createOrder(1)).thenReturn(testOrder);
@@ -135,7 +136,7 @@ class OrderServiceTest {
     @Test
     void testAddProductToOrder_withNullProduct() {
         // create user and order
-        User user = new User("test@test.com", "password", "John", "Doe", "url");
+        User user = new User(1,"test@test.com", "password", "John", "Doe", "url");
         Order order = new Order();
         order.setUser(user);
         order = orderRepository.save(order);
@@ -152,6 +153,8 @@ class OrderServiceTest {
 
     @Test
     void testDeleteProductFromOrder() {
+        User user = new User(1,"test@test.com", "password", "John", "Doe", "url");
+
         // Create a new order
         Order order = orderService.createOrder(1);
 
