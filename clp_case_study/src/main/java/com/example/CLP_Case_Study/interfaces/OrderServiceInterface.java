@@ -18,5 +18,5 @@ public interface OrderServiceInterface {
 
     Order deleteProductFromOrder(Order order, Product product);
 
-    List<Order> getAllOrdersByUser(User user);
+    //List<Order> getAllOrdersByUser(User user);
 }

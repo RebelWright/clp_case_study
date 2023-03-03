@@ -1,4 +1,4 @@
-package com.example.CLP_Case_Study.services;
+package com.example.CLP_Case_Study.interfaces;
 
 import com.example.CLP_Case_Study.models.Order;
 import com.example.CLP_Case_Study.models.User;
@@ -14,9 +14,9 @@ public interface UserServiceInterface {
 
     Optional<User> findById(int userId);
 
-    Optional<User> findByEmail(String email);
+    //Optional<User> findByEmail(String email);
 
-    Optional<List<Order>> getAllOrdersByUser(User user);
+    //Optional<List<Order>> getAllOrdersByUser(User user);
 
-    Optional<Order> findByOrderId(int orderId);
+    //Optional<Order> findByOrderId(int orderId);
 }

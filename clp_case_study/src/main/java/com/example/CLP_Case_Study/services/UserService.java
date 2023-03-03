@@ -1,12 +1,12 @@
 package com.example.CLP_Case_Study.services;
 
+import com.example.CLP_Case_Study.interfaces.UserServiceInterface;
 import com.example.CLP_Case_Study.models.Order;
 import com.example.CLP_Case_Study.models.User;
 import com.example.CLP_Case_Study.repositories.OrderRepository;
 import com.example.CLP_Case_Study.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.CLP_Case_Study.services.UserServiceInterface;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,13 +45,13 @@ public class UserService implements UserServiceInterface {
     }
 
 
-    public Optional<User> findByEmail(String email) {
+    /*public Optional<User> findByEmail(String email) {
         return userRepository.findByEmail(email);
-    }
+    }*/
 
 
 
-    public Optional<List<Order>> getAllOrdersByUser(User user) {return orderRepository.getAllOrdersByUser(user);}
-    public Optional<Order> findByOrderId(int orderId) {return orderRepository.findById(orderId);}
+    //public Optional<List<Order>> getAllOrdersByUser(User user) {return orderRepository.getAllOrdersByUser(user);}
+    //public Optional<Order> findByOrderId(int orderId) {return orderRepository.findById(orderId);}
 }
 
