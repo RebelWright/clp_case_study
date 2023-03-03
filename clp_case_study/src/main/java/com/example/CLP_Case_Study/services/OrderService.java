@@ -32,17 +32,7 @@ public class OrderService implements OrderServiceInterface {
         return orderRepository.findById(id);
     }
     public Order placeOrder(Order order) {return orderRepository.save(order);}
-    public Order save(Order order) {return orderRepository.save(order);}
 
-    /*public Order createOrder(NewOrderDTO orderDto, int userId) {
-        User user = userService.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
-        Order order = new Order();
-        order.setProducts(new ArrayList<>());
-        order.setOrderAmount(0);
-        order.setUser(user);
-
-        return orderRepository.save(order);
-    }*/
     public Order createOrder(int userId) {
         User user = userService.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
         Order order = new Order();
@@ -71,9 +61,9 @@ public class OrderService implements OrderServiceInterface {
         order.setOrderAmount(order.getOrderAmount() - product.getPrice()); // add product price to order amount
         return order;
     }
-    @Transactional(readOnly = true)
+    /*@Transactional(readOnly = true)
     public List<Order> getAllOrdersByUser(User user) {
         Optional<List<Order>> orders = orderRepository.getAllOrdersByUser(user);
         return orders.orElse(Collections.emptyList());
-    }
+    }*/
 }
