@@ -1,11 +1,19 @@
 package com.example.CLP_Case_Study.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
+/*@Data
+@NoArgsConstructor
+@AllArgsConstructor*/
 @Entity
-@Table(name="products")
+@Table(name="product")
 @Component
 public class Product {
     @Id
@@ -15,6 +23,8 @@ public class Product {
 
     @Column(nullable=false)
     private String productName;
+    @Column(nullable = false)
+    private String productType;
     @Column(nullable=false)
     private String productDescription;
     @Column(nullable=false)
@@ -22,14 +32,28 @@ public class Product {
     @Column(nullable=false)
     private String imageUrl;
 
+    @ManyToMany(mappedBy = "products")
+    private List<Order> orders = new ArrayList<>();
+
+
     public Product() {
     }
 
-    public Product(int productId, String productName, String productDescription, double price) {
+    public Product(int productId, String productName, String productType, String productDescription, double price, String imageUrl) {
         this.productId = productId;
         this.productName = productName;
+        this.productType = productType;
         this.productDescription = productDescription;
         this.price = price;
+        this.imageUrl = imageUrl;
+    }
+
+    public Product(String productName, String productType, String productDescription, double price, String imageUrl) {
+        this.productName = productName;
+        this.productType = productType;
+        this.productDescription = productDescription;
+        this.price = price;
+        this.imageUrl = imageUrl;
     }
 
     public int getProductId() {
@@ -48,6 +72,14 @@ public class Product {
         this.productName = productName;
     }
 
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+
     public String getProductDescription() {
         return productDescription;
     }
@@ -64,13 +96,32 @@ public class Product {
         this.price = price;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "productId=" + productId +
                 ", productName='" + productName + '\'' +
+                ", productType='" + productType + '\'' +
                 ", productDescription='" + productDescription + '\'' +
                 ", price=" + price +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof Product))
+            return false;
+        if (obj == this)
+            return true;
+        return this.getProductId() == ((Product) obj).getProductId();
     }
 }

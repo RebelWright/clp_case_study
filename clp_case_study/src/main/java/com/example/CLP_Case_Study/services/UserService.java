@@ -1,94 +1,57 @@
 package com.example.CLP_Case_Study.services;
 
+import com.example.CLP_Case_Study.models.Order;
 import com.example.CLP_Case_Study.models.User;
+import com.example.CLP_Case_Study.repositories.OrderRepository;
 import com.example.CLP_Case_Study.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.example.CLP_Case_Study.services.UserServiceInterface;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 @Service
-public class UserService {
+public class UserService implements UserServiceInterface {
 
     private final UserRepository userRepository;
+    private final OrderRepository orderRepository;
 
-    public UserService(UserRepository userRepository) {
+
+    public UserService(UserRepository userRepository, OrderRepository orderRepository) {
+
         this.userRepository = userRepository;
+        this.orderRepository = orderRepository;
     }
+
 
     public Optional<User> findByCredentials(String email, String password) {
         return userRepository.findByEmailAndPassword(email, password);
     }
 
-    public User save(User user) {
+    public User save(User user)
+    {
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new IllegalArgumentException("Email already exists");
+        }
         return userRepository.save(user);
     }
 
-    /*public List<User> getAll() {
-        return userRepository.findAll();
-    }*/
 
-    public Optional<User> findById(int id) {
-        return userRepository.findById(id);
+    public Optional<User> findById(int userId) {
+        return userRepository.findById(userId);
     }
 
-    /*public Optional<User> findByUsername(String username) {
-        return userRepository.findByUsername(username);
-    }*/
 
     public Optional<User> findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
-    //Modify this to add product to order. Then take the similar logic and do it in the OrderService
-    @Transactional
-    public List<User> addFollower(User followed, User follower) {
-        List<User> followSuccess = new ArrayList();
 
-        List<User> newFollowers = followed.getFollowers();
-        newFollowers.add(follower);
-        followed.setFollowers(newFollowers);
 
-        List<User> newFollowing = follower.getFollowing();
-        newFollowing.add(followed);
-        follower.setFollowing(newFollowing);
-
-        followSuccess.add(followed);
-        followSuccess.add(follower);
-        return followSuccess;
-    }
-
-    @Transactional
-    public List<User> removeFollower(User followed, User follower) {
-        List<User> followSuccess = new ArrayList();
-
-        List<User> newFollowers = followed.getFollowers();
-        newFollowers.remove(follower);
-        followed.setFollowers(newFollowers);
-
-        List<User> newFollowing = follower.getFollowing();
-        newFollowing.remove(followed);
-        follower.setFollowing(newFollowing);
-
-        followSuccess.add(followed);
-        followSuccess.add(follower);
-        return followSuccess;
-    }
-
-    //modify this to be get products for order
-    public List<Post> getFeedForUser(User user) {
-        List<User> following = user.getFollowing();
-        Optional<List<Post>> feedOptional = postService.getFeedForUser(following);
-        if (!feedOptional.isPresent()) {
-            return null;
-        }
-        return feedOptional.get();
-    }
-
-    public Optional<List<Post>> getAllPostsByAUser(User user) {
-        return postService.getAllPostsByUser(user);
-    }
+    public Optional<List<Order>> getAllOrdersByUser(User user) {return orderRepository.getAllOrdersByUser(user);}
+    public Optional<Order> findByOrderId(int orderId) {return orderRepository.findById(orderId);}
 }
 

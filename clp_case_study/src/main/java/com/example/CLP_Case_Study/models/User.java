@@ -1,18 +1,24 @@
 package com.example.CLP_Case_Study.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
+/*@Data
+@NoArgsConstructor
+@AllArgsConstructor*/
 @Entity
-@Table(name="users")
+@Table(name="user")
 @Component
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String email;
     @Column(nullable = false)
     private String password;
