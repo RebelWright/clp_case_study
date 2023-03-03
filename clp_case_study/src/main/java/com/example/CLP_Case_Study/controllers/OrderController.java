@@ -27,18 +27,7 @@ public class OrderController {
         this.userService = userService;
     }
 
-    /*@PostMapping("/{userId}/createOrder")
-    public ResponseEntity createOrder(@PathVariable("userId") int userId, @RequestBody NewOrderDTO orderDTO) {
-        orderDTO.setUserId(userId);
-        Optional<User> optionalUser = userService.findById(userId);
-        if (!optionalUser.isPresent()) {
-            return ResponseEntity.badRequest().body("No users were found with this id.");
-        }
 
-        Order newOrder = orderService.createOrder(orderDTO, userId);
-
-        return ResponseEntity.ok(newOrder);
-    }*/
     @PostMapping("/{userId}/createOrder")
     public ResponseEntity createOrder(@PathVariable("userId") int userId) {
         Optional<User> optionalUser = userService.findById(userId);
