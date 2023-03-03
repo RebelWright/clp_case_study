@@ -1,12 +1,13 @@
 package com.example.CLP_Case_Study.services;
 
+import com.example.CLP_Case_Study.interfaces.AuthServiceInterface;
 import com.example.CLP_Case_Study.models.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
-public class AuthService {
+public class AuthService implements AuthServiceInterface {
 
     private final UserService userService;
 

@@ -1,6 +1,6 @@
 package com.example.CLP_Case_Study.dtos;
 
-
+import com.example.CLP_Case_Study.models.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,13 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class RegisterRequest {
-    private String email;
-    private String password;
-    private String firstName;
-    private String lastName;
-    private String flagURL;
-
-
+public class NewOrderDTO {
+    private int userId;
+    //private User user;
+    private double orderAmount = 0;
 }
-

@@ -1,30 +1,79 @@
 package com.example.CLP_Case_Study.services;
 
+import com.example.CLP_Case_Study.dtos.NewOrderDTO;
+import com.example.CLP_Case_Study.interfaces.OrderServiceInterface;
+import com.example.CLP_Case_Study.models.Product;
+import com.example.CLP_Case_Study.models.User;
+import com.example.CLP_Case_Study.repositories.OrderRepository;
+import com.example.CLP_Case_Study.repositories.ProductRepository;
+import com.example.CLP_Case_Study.repositories.UserRepository;
+import org.springframework.data.domain.jaxb.SpringDataJaxb;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.example.CLP_Case_Study.models.Order;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class OrderService {
+@Transactional
+@Service
+public class OrderService implements OrderServiceInterface {
 
-    public Optional<Post> findById(int id) {
-        return postRepository.findById(id);
+    private final OrderRepository orderRepository;
+    private final UserService userService;
+
+    public OrderService(OrderRepository orderRepository, UserService userService) {
+        this.orderRepository = orderRepository;
+        this.userService = userService;
+    }
+    public Optional<Order> findById(int id) {
+        return orderRepository.findById(id);
+    }
+    public Order placeOrder(Order order) {return orderRepository.save(order);}
+    public Order save(Order order) {return orderRepository.save(order);}
+
+    /*public Order createOrder(NewOrderDTO orderDto, int userId) {
+        User user = userService.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+        Order order = new Order();
+        order.setProducts(new ArrayList<>());
+        order.setOrderAmount(0);
+        order.setUser(user);
+
+        return orderRepository.save(order);
+    }*/
+    public Order createOrder(int userId) {
+        User user = userService.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+        Order order = new Order();
+        order.setProducts(new ArrayList<>());
+        order.setOrderAmount(0);
+        order.setUser(user);
+
+        return orderRepository.save(order);
+    }
+
+
+    @Transactional
+    public Order addProductToOrder(Order order, Product product) {
+        List<Product> productList = order.getProducts();
+        productList.add(product);
+        order.setProducts(productList);
+        order.setOrderAmount(order.getOrderAmount() + product.getPrice()); // add product price to order amount
+        return order;
     }
 
     @Transactional
-    public Post addComment(Post post, Post comment) {
-        List<Post> commentList = post.getComments();
-        commentList.add(comment);
-        post.setComments(commentList);
-        return post;
+    public Order deleteProductFromOrder(Order order, Product product) {
+        List<Product> productList = order.getProducts();
+        productList.remove(product);
+        order.setProducts(productList);
+        order.setOrderAmount(order.getOrderAmount() - product.getPrice()); // add product price to order amount
+        return order;
     }
-
-    @Transactional
-    public Post deleteComment(Post post, Post comment) {
-        List<Post> commentList = post.getComments();
-        commentList.remove(comment);
-        post.setComments(commentList);
-        deletePost(comment.getId());
-        return post;
+    @Transactional(readOnly = true)
+    public List<Order> getAllOrdersByUser(User user) {
+        Optional<List<Order>> orders = orderRepository.getAllOrdersByUser(user);
+        return orders.orElse(Collections.emptyList());
     }
 }

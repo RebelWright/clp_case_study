@@ -1,32 +1,30 @@
 package com.example.CLP_Case_Study.services;
 
+import com.example.CLP_Case_Study.interfaces.ProductServiceInterface;
+import com.example.CLP_Case_Study.models.Product;
+import com.example.CLP_Case_Study.repositories.ProductRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
-public class ProductService {
+@Transactional
+@Service
+public class ProductService implements ProductServiceInterface {
 
-    public List<Post> getAll() {
-        return this.postRepository.findAll();
-    }
-    public Optional<Post> findById(int id) {
-        return postRepository.findById(id);
-    }
-    @Transactional
-    public Post addComment(Post post, Post comment) {
-        List<Post> commentList = post.getComments();
-        commentList.add(comment);
-        post.setComments(commentList);
-        return post;
+    private final ProductRepository productRepository;
+
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
     }
 
-    @Transactional
-    public Post deleteComment(Post post, Post comment) {
-        List<Post> commentList = post.getComments();
-        commentList.remove(comment);
-        post.setComments(commentList);
-        deletePost(comment.getId());
-        return post;
+    public List<Product> getAll() {
+        return this.productRepository.findAll();
     }
+    public Optional<List<Product>> getAllByProductType(String productType) {return this.productRepository.findAllByProductType(productType);}
+    public Optional<Product> findById(int productId) {
+        return productRepository.findById(productId);
+    }
+
 }
