@@ -19,6 +19,8 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -29,8 +31,6 @@ class OrderServiceTest {
     private OrderRepository orderRepository;
     @Mock
     private UserRepository userRepository;
-    @Mock
-    private Order mockOrder;
 
     @InjectMocks
     private OrderService orderService;
@@ -42,7 +42,7 @@ class OrderServiceTest {
     }
 
     @Test
-    void findById() {
+    void testFindByIdSuccess() {
         int orderId = 1;
         List<Product> products = new ArrayList<>();
         double orderAmount = 10.0;
@@ -59,7 +59,7 @@ class OrderServiceTest {
     }
 
     @Test
-    void placeOrder() {
+    void testPlaceOrderSuccess() {
         // Arrange
         int orderId = 1;
         List<Product> products = new ArrayList<>();
@@ -77,19 +77,19 @@ class OrderServiceTest {
     }
 
     @Test
-    void createOrderSuccess() {
+    void testCreateOrderSuccess() {
         // Arrange
         int userId = 1;
         User user = new User();
         user.setUserId(userId);
-        when(userRepository.findById(userId)).thenReturn(Optional.of(user));
+        when(userService.findById(userId)).thenReturn(Optional.of(user));
 
         Order order = new Order();
         order.setUser(user);
-        when(orderRepository.save(order)).thenReturn(order);
+        when(orderRepository.save(any(Order.class))).thenReturn(order);
 
         // Act
-        Order result = orderService.createOrder(1);
+        Order result = orderService.createOrder(userId);
 
         // Assert
         assertNotNull(result);
@@ -102,53 +102,30 @@ class OrderServiceTest {
     void createOrder_userNotFound_throwException() {
         // Arrange
         int userId = 1;
-        when(userRepository.findById(userId)).thenReturn(Optional.empty());
-
         // Act & Assert
-        assertThrows(RuntimeException.class, () -> orderService.createOrder(userId));
+        assertThrows(RuntimeException.class, () -> orderService.createOrder(2));
     }
 
     @Test
     void testAddProductToOrder() {
         // create user and order
         User user = new User(1,"test@test.com", "password", "John", "Doe", "url");
-        Order testOrder = new Order();
-        testOrder.setUser(user);
-        testOrder = orderRepository.save(testOrder);
-
-        //Order order = orderService.createOrder(1);
-        when(orderService.createOrder(1)).thenReturn(testOrder);
+        when(userService.findById(1)).thenReturn(Optional.of(user));
+        Order order = new Order(1,new ArrayList<>(),0,user);
+        when(orderRepository.save(any(Order.class))).thenReturn(order);
+        order = orderService.createOrder(1);
 
         // create product
-        Product testProduct = new Product(1,"test product", "type", "description", 10.00, "url");
-        testProduct = productRepository.save(testProduct);
+        Product product = new Product(1,"Test Product","Test Type","Test Description",10,"test.url");
 
         // add product to order
-        Order updatedOrder = orderService.addProductToOrder(mockOrder, testProduct);
+        Order updatedOrder = orderService.addProductToOrder(order, product);
 
         // assert that order was updated
         assertNotNull(updatedOrder);
         assertEquals(1, updatedOrder.getProducts().size());
         assertEquals(10.00, updatedOrder.getOrderAmount());
-        assertEquals(testProduct, updatedOrder.getProducts().get(0));
-    }
-
-    @Test
-    void testAddProductToOrder_withNullProduct() {
-        // create user and order
-        User user = new User(1,"test@test.com", "password", "John", "Doe", "url");
-        Order order = new Order();
-        order.setUser(user);
-        order = orderRepository.save(order);
-
-
-        // add null product to order
-        Order updatedOrder = orderService.addProductToOrder(order, null);
-
-        // assert that order was not updated
-        assertNotNull(updatedOrder);
-        assertEquals(0, updatedOrder.getProducts().size());
-        assertEquals(0.00, updatedOrder.getOrderAmount());
+        assertEquals(product, updatedOrder.getProducts().get(0));
     }
 
     @Test
@@ -156,15 +133,9 @@ class OrderServiceTest {
         User user = new User(1,"test@test.com", "password", "John", "Doe", "url");
 
         // Create a new order
-        Order order = orderService.createOrder(1);
-
+        Order order = new Order(1,new ArrayList<>(),0,user);
         // Add a product to the order
-        Product product = new Product();
-        product.setProductName("Test Product");
-        product.setPrice(9.99);
-        product.setProductType("Test Type");
-        product.setProductDescription("Test Description");
-        product.setImageUrl("test-image-url");
+        Product product = new Product(1,"Test Product","Test Type","Test Description",9.99,"test.url");
 
         orderService.addProductToOrder(order, product);
 

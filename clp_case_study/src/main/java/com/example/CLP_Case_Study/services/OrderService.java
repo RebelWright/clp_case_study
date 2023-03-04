@@ -12,10 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.example.CLP_Case_Study.models.Order;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Transactional
 @Service
@@ -48,24 +45,22 @@ public class OrderService implements OrderServiceInterface {
 
     @Transactional
     public Order addProductToOrder(Order order, Product product) {
-        List<Product> productList = order.getProducts();
+        List<Product> productList = new ArrayList<>(order.getProducts());
         productList.add(product);
         order.setProducts(productList);
         order.setOrderAmount(order.getOrderAmount() + product.getPrice()); // add product price to order amount
-        return order;
+        //orderRepository.updateOrderProductsAndAmountById(order.getOrderId(),order.getProducts(),order.getOrderAmount());
+        return orderRepository.save(order);
+
     }
 
     @Transactional
     public Order deleteProductFromOrder(Order order, Product product) {
-        List<Product> productList = order.getProducts();
+        List<Product> productList = new ArrayList<>(order.getProducts());
         productList.remove(product);
         order.setProducts(productList);
         order.setOrderAmount(order.getOrderAmount() - product.getPrice()); // add product price to order amount
-        return order;
+        return orderRepository.save(order);
     }
-    /*@Transactional(readOnly = true)
-    public List<Order> getAllOrdersByUser(User user) {
-        Optional<List<Order>> orders = orderRepository.getAllOrdersByUser(user);
-        return orders.orElse(Collections.emptyList());
-    }*/
+
 }
