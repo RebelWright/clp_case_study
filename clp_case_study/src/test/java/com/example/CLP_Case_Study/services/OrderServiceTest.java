@@ -136,16 +136,16 @@ class OrderServiceTest {
         Order order = new Order(1,new ArrayList<>(),0,user);
         // Add a product to the order
         Product product = new Product(1,"Test Product","Test Type","Test Description",9.99,"test.url");
-
+        assertNotNull(product);
         orderService.addProductToOrder(order, product);
 
         // Remove the product from the order
-        Order updatedOrder = orderService.deleteProductFromOrder(order, product);
-
+        orderService.deleteProductFromOrder(order, product);
+        //when(orderService.deleteProductFromOrder(order,product)).thenReturn(order);
         // Assert that the product was removed from the order
-        assertFalse(updatedOrder.getProducts().contains(product));
+        assertFalse(order.getProducts().contains(product));
 
         // Assert that the order amount was updated correctly
-        assertEquals(0, Double.compare(updatedOrder.getOrderAmount(), 0.0));
+        assertEquals(0, Double.compare(order.getOrderAmount(), 0.0));
     }
 }

@@ -7,6 +7,8 @@ import com.example.CLP_Case_Study.models.User;
 import com.example.CLP_Case_Study.repositories.OrderRepository;
 import com.example.CLP_Case_Study.repositories.ProductRepository;
 import com.example.CLP_Case_Study.repositories.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.jaxb.SpringDataJaxb;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +23,7 @@ public class OrderService implements OrderServiceInterface {
     private final OrderRepository orderRepository;
     private final UserService userService;
     private final UserRepository userRepository;
+    private static final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
     public OrderService(OrderRepository orderRepository, UserService userService, UserRepository userRepository) {
         this.orderRepository = orderRepository;
@@ -54,13 +57,31 @@ public class OrderService implements OrderServiceInterface {
 
     }
 
+    /*@Transactional
+    public Order deleteProductFromOrder(Order order, Product product) {
+        List<Product> productList = new ArrayList<>(order.getProducts());
+        if (productList.remove(product)) { // check if product is not null before removing
+            order.setProducts(productList);
+            order.setOrderAmount(order.getOrderAmount() - product.getPrice()); // add product price to order amount
+            return orderRepository.save(order);
+        } else {
+            throw new IllegalArgumentException("Product is null");
+        }
+    }*/
     @Transactional
     public Order deleteProductFromOrder(Order order, Product product) {
         List<Product> productList = new ArrayList<>(order.getProducts());
-        productList.remove(product);
-        order.setProducts(productList);
-        order.setOrderAmount(order.getOrderAmount() - product.getPrice()); // add product price to order amount
-        return orderRepository.save(order);
+        logger.debug("Initial product list size: {}", productList.size());
+        if (productList.remove(product)) { // check if product is not null before removing
+            logger.debug("Product removed from order: {}", product);
+            order.setProducts(productList);
+            order.setOrderAmount(order.getOrderAmount() - product.getPrice()); // add product price to order amount
+            Order updatedOrder = orderRepository.save(order);
+            logger.debug("Updated order after removing product: {}", updatedOrder);
+            return updatedOrder;
+        } else {
+            throw new IllegalArgumentException("Product is null");
+        }
     }
 
 }
