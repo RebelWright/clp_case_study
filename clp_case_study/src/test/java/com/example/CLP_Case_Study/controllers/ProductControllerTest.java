@@ -61,7 +61,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    public void testGetProductByIdNotFound() throws Exception {
+    public void testGetProductByIdFail() throws Exception {
         when(productService.findById(1)).thenReturn(Optional.empty());
 
         mockMvc.perform(get("/products/1"))
@@ -87,7 +87,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    public void testGetAllProductsByTypeNotFound() throws Exception {
+    public void testGetAllProductsByTypeFail() throws Exception {
         when(productService.getAllByProductType("type1")).thenReturn(Optional.empty());
 
         mockMvc.perform(get("/products/type/type1"))

@@ -99,7 +99,7 @@ class OrderServiceTest {
     }
 
     @Test
-    void createOrder_userNotFound_throwException() {
+    void createOrderFail() {
         // Arrange
         int userId = 1;
         // Act & Assert
@@ -107,7 +107,7 @@ class OrderServiceTest {
     }
 
     @Test
-    void testAddProductToOrder() {
+    void testAddProductToOrderSuccess() {
         // create user and order
         User user = new User(1,"test@test.com", "password", "John", "Doe", "url");
         when(userService.findById(1)).thenReturn(Optional.of(user));
@@ -129,7 +129,7 @@ class OrderServiceTest {
     }
 
     @Test
-    void testDeleteProductFromOrder() {
+    void testDeleteProductFromOrderSuccess() {
         User user = new User(1,"test@test.com", "password", "John", "Doe", "url");
 
         // Create a new order

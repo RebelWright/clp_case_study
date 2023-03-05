@@ -85,7 +85,7 @@ public class UserControllerTest {
                 .andExpect(jsonPath("$.user.userId", is(1)));
     }
     @Test
-    public void testGetOrderForUserUserNotFound() throws Exception {
+    public void testGetOrderForUserFail() throws Exception {
         when(userService.findById(1)).thenReturn(Optional.empty());
 
         mockMvc.perform(get("/users/1/1"))

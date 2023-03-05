@@ -41,7 +41,7 @@ public class OrderControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
-    public void createOrder_returnsBadRequest_whenUserNotFound() throws Exception {
+    public void createOrderTestFail() throws Exception {
         int userId = 1;
         when(userService.findById(userId)).thenReturn(Optional.empty());
 
@@ -51,7 +51,7 @@ public class OrderControllerTest {
     }
 
     @Test
-    public void createOrder_returnsNewOrder_whenUserFound() throws Exception {
+    public void createOrderTestSuccess() throws Exception {
         int userId = 1;
         User user = new User(1,"test.com","password", "John", "Doe", "flagURL");
         when(userService.findById(userId)).thenReturn(Optional.of(user));
@@ -66,7 +66,7 @@ public class OrderControllerTest {
     }
 
     @Test
-    public void placeOrder_returnsBadRequest_whenOrderNotFound() throws Exception {
+    public void placeOrderTestFail() throws Exception {
         int orderId = 1;
         when(orderService.findById(orderId)).thenReturn(Optional.empty());
 
@@ -76,7 +76,7 @@ public class OrderControllerTest {
     }
 
     @Test
-    public void placeOrder_returnsUpdatedOrder_whenOrderFound() throws Exception {
+    public void placeOrderTestSuccess() throws Exception {
         User user = new User(1,"test.com","password", "John", "Doe", "flagURL");
         int orderId = 1;
         Order order = new Order(1,new ArrayList<>(),10.0,user);
@@ -90,7 +90,7 @@ public class OrderControllerTest {
     }
 
     @Test
-    public void addProductToOrder_returnsOrder_whenOrderFound() throws Exception {
+    public void addProductToOrderTestSuccess() throws Exception {
         User user = new User(1,"test.com","password", "John", "Doe", "flagURL");
         int orderId = 1;
         List<Product> products = new ArrayList<>();
@@ -115,7 +115,7 @@ public class OrderControllerTest {
     }
 
     @Test
-    public void testRemoveProductFromOrder() throws Exception {
+    public void removeProductFromOrderTestSuccess() throws Exception {
         // Setup
         User user = new User(1,"test.com","password", "John", "Doe", "flagURL");
         int orderId = 1;

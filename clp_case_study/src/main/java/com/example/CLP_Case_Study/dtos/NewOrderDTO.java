@@ -10,6 +10,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor*/
 public class NewOrderDTO {
     private int userId;
-    //private User user;
     private double orderAmount = 0;
 }

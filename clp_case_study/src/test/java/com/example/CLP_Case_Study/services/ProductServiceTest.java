@@ -26,7 +26,7 @@ public class ProductServiceTest {
     private ProductService productService;
 
     @Test
-    public void testGetAll() {
+    public void testGetAllProductsSuccess() {
         // given
         List<Product> productList = new ArrayList<>();
         Product product1 = new Product(1, "product1", "type1", "description1", 10.00, "url1");
@@ -43,7 +43,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testGetAllByProductType() {
+    public void testGetAllByProductTypeSuccess() {
         // given
         List<Product> productList = new ArrayList<>();
         Product product1 = new Product(1, "product1", "type1", "description1", 10.00, "url1");
@@ -61,7 +61,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testFindById() {
+    public void testFindByIdSuccess() {
         // given
         int productId = 1;
         Product product = new Product(productId, "product1", "type1", "description1", 10.00, "url1");

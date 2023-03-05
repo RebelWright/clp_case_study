@@ -44,14 +44,5 @@ public class UserService implements UserServiceInterface {
         return userRepository.findById(userId);
     }
 
-
-    /*public Optional<User> findByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }*/
-
-
-
-    //public Optional<List<Order>> getAllOrdersByUser(User user) {return orderRepository.getAllOrdersByUser(user);}
-    //public Optional<Order> findByOrderId(int orderId) {return orderRepository.findById(orderId);}
 }
 

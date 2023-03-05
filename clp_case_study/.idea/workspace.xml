@@ -5,28 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/logback.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/advice/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/TestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/UserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/advice/AuthAspectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/advice/LoggingAspectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/advice/RestExceptionHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/advice/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/advice/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/OrderRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/ProductRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/advice/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/advice/RestExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/repositories/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logback.log" beforeDir="false" afterPath="$PROJECT_DIR$/logback.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/dtos/NewOrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/dtos/NewOrderDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/repositories/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/controllers/OrderControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/controllers/OrderControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/controllers/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/controllers/ProductControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/controllers/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/controllers/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/UserRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/services/OrderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/services/OrderServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/advice/RestExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/advice/RestExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/repositories/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/repositories/OrderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/services/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/services/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/services/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/services/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/services/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/services/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/controllers/OrderControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/controllers/OrderControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/controllers/ProductControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/controllers/ProductControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/controllers/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/controllers/UserControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/repositories/UserRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/repositories/UserRepositoryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/services/OrderServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/services/OrderServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/services/ProductServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/services/ProductServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,14 +101,25 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Revature\clp_case_study\clp_case_study\clp_case_study\src\main\resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.CLP_Case_Study.advice" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.CLP_Case_Study.advice" />
       <recent name="com.example.CLP_Case_Study.repositories" />
       <recent name="com.example.CLP_Case_Study.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryTest">
-    <configuration name="ClpCaseStudyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.ClpCaseStudyApplication" />
+  <component name="RunManager" selected="JUnit.OrderRepositoryTest.findByOrderIdAndUser">
+    <configuration name="CLP_Case_Study in CLP_Case_Study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClpCaseStudyApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLP_Case_Study" />
       <extension name="coverage">
         <pattern>
@@ -100,59 +127,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study" />
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.ClpCaseStudyApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderControllerTest.placeOrder_returnsUpdatedOrder_whenOrderFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLP_Case_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.CLP_Case_Study.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.controllers.OrderControllerTest" />
-      <option name="METHOD_NAME" value="placeOrder_returnsUpdatedOrder_whenOrderFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderControllerTest.removeProductFromOrder_returnsOrder_whenOrderFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLP_Case_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.CLP_Case_Study.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.controllers.OrderControllerTest" />
-      <option name="METHOD_NAME" value="removeProductFromOrder_returnsOrder_whenOrderFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderControllerTest.testRemoveProductFromOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLP_Case_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.CLP_Case_Study.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.controllers.OrderControllerTest" />
-      <option name="METHOD_NAME" value="testRemoveProductFromOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderRepositoryTest.findByOrderIdAndUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLP_Case_Study" />
       <extension name="coverage">
         <pattern>
@@ -161,19 +143,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.repositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.repositories.UserRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.repositories.OrderRepositoryTest" />
+      <option name="METHOD_NAME" value="findByOrderIdAndUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductRepositoryTest.findAllByProductTypeSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.CLP_Case_Study.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.repositories.ProductRepositoryTest" />
+      <option name="METHOD_NAME" value="findAllByProductTypeSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="repositories in CLP_Case_Study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserRepositoryTest" />
-        <item itemvalue="JUnit.OrderControllerTest.placeOrder_returnsUpdatedOrder_whenOrderFound" />
-        <item itemvalue="JUnit.OrderControllerTest.testRemoveProductFromOrder" />
-        <item itemvalue="Application.ClpCaseStudyApplication" />
-        <item itemvalue="JUnit.OrderControllerTest.removeProductFromOrder_returnsOrder_whenOrderFound" />
+        <item itemvalue="JUnit.OrderRepositoryTest.findByOrderIdAndUser" />
+        <item itemvalue="JUnit.repositories in CLP_Case_Study" />
+        <item itemvalue="JUnit.CLP_Case_Study in CLP_Case_Study" />
+        <item itemvalue="JUnit.ClpCaseStudyApplicationTests" />
+        <item itemvalue="JUnit.ProductRepositoryTest.findAllByProductTypeSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -211,5 +218,14 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/clp_case_study$CLP_Case_Study_in_CLP_Case_Study.ic" NAME="CLP_Case_Study in CLP_Case_Study Coverage Results" MODIFIED="1677983220307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/clp_case_study$ClpCaseStudyApplicationTests.ic" NAME="ClpCaseStudyApplicationTests Coverage Results" MODIFIED="1677982317454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.CLP_Case_Study.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/clp_case_study$ClpCaseStudyApplication.ic" NAME="ClpCaseStudyApplication Coverage Results" MODIFIED="1677975539101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.CLP_Case_Study.*</FILTER>
+    </SUITE>
   </component>
 </project>
