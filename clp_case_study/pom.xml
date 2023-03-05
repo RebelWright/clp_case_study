@@ -11,6 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>CLP_Case_Study</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>CLP_Case_Study</name>
 	<description>CLP_Case_Study</description>
 	<properties>
@@ -72,7 +73,6 @@
 			<artifactId>h2</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 
 	</dependencies>
 
