@@ -87,29 +87,4 @@ class UserServiceTest {
         assertNotEquals(resultUser.get().getUserId(), 100);
         assertNotEquals(100, mockUser.getUserId());
     }
-
-    /*@Test
-    void findByEmailTestSuccess() {
-        User mockUser = new User("test.com", "password", "John", "Doe", "JDoe");
-        when(userRepository.findByEmail("test.com")).thenReturn(Optional.of(mockUser));
-        Optional<User> resultUser = userService.findByEmail("test.com");
-        assertEquals(resultUser.get().getEmail(), mockUser.getEmail());
-    }
-
-    @Test
-    void findByEmailTestFail() {
-        User mockUser = new User("test.com", "password", "John", "Doe", "JDoe");
-        when(userRepository.findByEmail("test.com")).thenReturn(Optional.of(mockUser));
-        Optional<User> resultUser = userService.findByEmail("test.com");
-        assertNotEquals(resultUser.get().getEmail(), "com.test");
-        assertNotEquals("com.test", mockUser.getEmail());
-    }*/
-
-    /*@Test
-    void getAllOrdersByUser() {
-    }
-
-    @Test
-    void findByOrderId() {
-    }*/
 }

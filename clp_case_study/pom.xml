@@ -67,6 +67,12 @@
 			<artifactId>spring-aop</artifactId>
 			<version>5.3.25</version>
 		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 

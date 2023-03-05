@@ -1,19 +1,17 @@
 package com.example.CLP_Case_Study.services;
 
-import com.example.CLP_Case_Study.dtos.NewOrderDTO;
 import com.example.CLP_Case_Study.interfaces.OrderServiceInterface;
+import com.example.CLP_Case_Study.models.Order;
 import com.example.CLP_Case_Study.models.Product;
 import com.example.CLP_Case_Study.models.User;
 import com.example.CLP_Case_Study.repositories.OrderRepository;
-import com.example.CLP_Case_Study.repositories.ProductRepository;
 import com.example.CLP_Case_Study.repositories.UserRepository;
-import org.springframework.data.domain.jaxb.SpringDataJaxb;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.CLP_Case_Study.models.Order;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,6 +22,7 @@ public class OrderService implements OrderServiceInterface {
     private final OrderRepository orderRepository;
     private final UserService userService;
     private final UserRepository userRepository;
+    private static final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
     public OrderService(OrderRepository orderRepository, UserService userService, UserRepository userRepository) {
         this.orderRepository = orderRepository;
@@ -48,24 +47,26 @@ public class OrderService implements OrderServiceInterface {
 
     @Transactional
     public Order addProductToOrder(Order order, Product product) {
-        List<Product> productList = order.getProducts();
+        List<Product> productList = new ArrayList<>(order.getProducts());
         productList.add(product);
         order.setProducts(productList);
         order.setOrderAmount(order.getOrderAmount() + product.getPrice()); // add product price to order amount
-        return order;
+        return orderRepository.save(order);
+
     }
+
 
     @Transactional
     public Order deleteProductFromOrder(Order order, Product product) {
-        List<Product> productList = order.getProducts();
-        productList.remove(product);
-        order.setProducts(productList);
-        order.setOrderAmount(order.getOrderAmount() - product.getPrice()); // add product price to order amount
-        return order;
+        List<Product> productList = new ArrayList<>(order.getProducts());
+        if (productList.remove(product)) { // check if product is not null before removing
+            order.setProducts(productList);
+            order.setOrderAmount(order.getOrderAmount() - product.getPrice());
+            Order updatedOrder = orderRepository.save(order);
+            return updatedOrder;
+        } else {
+            throw new IllegalArgumentException("Product is null");
+        }
     }
-    /*@Transactional(readOnly = true)
-    public List<Order> getAllOrdersByUser(User user) {
-        Optional<List<Order>> orders = orderRepository.getAllOrdersByUser(user);
-        return orders.orElse(Collections.emptyList());
-    }*/
+
 }

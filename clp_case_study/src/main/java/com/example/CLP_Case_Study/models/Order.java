@@ -14,7 +14,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor*/
 @Entity
-@Table(name="order")
+@Table(name="orders")
 @Component
 public class Order {
     @Id
@@ -95,7 +95,7 @@ public class Order {
                 '}';
     }
 
-   /* @Override
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Order)) return false;
@@ -106,5 +106,6 @@ public class Order {
     @Override
     public int hashCode() {
         return Objects.hash(orderId, products, orderAmount, user);
-    }*/
+
+    }
 }

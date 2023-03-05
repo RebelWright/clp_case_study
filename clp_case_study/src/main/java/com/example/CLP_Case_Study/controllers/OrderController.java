@@ -8,6 +8,8 @@ import com.example.CLP_Case_Study.models.Product;
 import com.example.CLP_Case_Study.models.User;
 import com.example.CLP_Case_Study.services.OrderService;
 import com.example.CLP_Case_Study.services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +23,7 @@ public class OrderController {
 
     private final OrderService orderService;
     private final UserService userService;
+    private static final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
     public OrderController(OrderService orderService, UserService userService) {
         this.orderService = orderService;
@@ -51,12 +54,21 @@ public class OrderController {
 
         return ResponseEntity.ok(updatedOrder);
     }
-    @PostMapping("/{orderId}/addProduct")
+    /*@PostMapping("/{orderId}/addProduct")
     public ResponseEntity<Order> addProductToOrder(@PathVariable("orderId") int orderId, @RequestBody Product product) {
         Order order = orderService.findById(orderId)
                 .orElseThrow(() -> new ResourceNotFoundException("Order not found with id " + orderId));
         orderService.addProductToOrder(order, product);
         return ResponseEntity.ok(order);
+    }*/
+    @PostMapping("/{orderId}/addProduct")
+    public ResponseEntity<Order> addProductToOrder(@PathVariable("orderId") int orderId, @RequestBody Product product) {
+        Order order = orderService.findById(orderId)
+                .orElseThrow(() -> new ResourceNotFoundException("Order not found with id " + orderId));
+        Order updatedOrder = orderService.addProductToOrder(order, product);
+        logger.info("Product {} added to order with ID {}", product.getProductName(), orderId);
+        logger.debug("Updated order: {}", updatedOrder);
+        return ResponseEntity.ok(updatedOrder);
     }
 
     @PostMapping("/{orderId}/removeProduct")
