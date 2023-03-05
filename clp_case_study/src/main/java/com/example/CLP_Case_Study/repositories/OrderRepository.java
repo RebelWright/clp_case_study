@@ -16,10 +16,6 @@ import java.util.Optional;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Integer> {
 
-    //Optional<List<Product>> findAllByOrderId(int orderId);
-    //Optional<List<Order>> getAllOrdersByUser(User user);
-    //Optional<List<Product>> findByAuthorInAndPostType(List<User> author, PostType postType);
-    //Optional<List<Product>> findAllByUserAndPostType(User user, PostType postType);
     Optional<Order> findByOrderIdAndUser(int orderId, User user);
     /*@Modifying
     @Transactional

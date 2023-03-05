@@ -44,7 +44,7 @@ public class AuthAspectTest {
     @BeforeEach
     public void setUp() {
         when(request.getSession()).thenReturn(session);
-        when(joinPoint.getSignature()).thenReturn(methodSignature);
+        lenient().when(joinPoint.getSignature()).thenReturn(methodSignature);
     }
 
     @Test

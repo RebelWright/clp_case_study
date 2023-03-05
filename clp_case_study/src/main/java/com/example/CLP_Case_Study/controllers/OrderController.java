@@ -66,8 +66,8 @@ public class OrderController {
         Order order = orderService.findById(orderId)
                 .orElseThrow(() -> new ResourceNotFoundException("Order not found with id " + orderId));
         Order updatedOrder = orderService.addProductToOrder(order, product);
-        logger.info("Product {} added to order with ID {}", product.getProductName(), orderId);
-        logger.debug("Updated order: {}", updatedOrder);
+        /*logger.info("Product {} added to order with ID {}", product.getProductName(), orderId);
+        logger.debug("Updated order: {}", updatedOrder);*/
         return ResponseEntity.ok(updatedOrder);
     }
 
