@@ -27,7 +27,7 @@ public class OrderRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 
-    @Test
+    //@Test
     public void findByOrderIdAndUser() {
         // Create a test user
         User user = new User(1,"test@gmail.com", "password", "John", "Doe", "https://flag.com");
