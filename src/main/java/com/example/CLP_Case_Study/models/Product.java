@@ -34,8 +34,6 @@ public class Product {
     private double price = 0.00;
     @Column(nullable=false)
     private String imageUrl;
-
-    //@Builder.Default
     @ManyToMany(mappedBy = "products")
     private List<Order> orders = new ArrayList<>();
 
