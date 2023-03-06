@@ -1,6 +1,7 @@
 package com.example.CLP_Case_Study.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -12,7 +13,8 @@ import java.util.Objects;
 
 /*@Data
 @NoArgsConstructor
-@AllArgsConstructor*/
+@AllArgsConstructor
+@Builder*/
 @Entity
 @Table(name="orders")
 @Component
@@ -22,6 +24,7 @@ public class Order {
     private int orderId;
 
     // One order can contain many products
+    //@Builder.Default
     @ManyToMany
     @JoinTable(
             name = "order_product",

@@ -7,8 +7,10 @@ import lombok.NoArgsConstructor;
 
 /*@Data
 @NoArgsConstructor
-@AllArgsConstructor*/
+@AllArgsConstructor
+@Builder*/
 public class NewOrderDTO {
     private int userId;
+    //@Builder.Default
     private double orderAmount = 0;
 }

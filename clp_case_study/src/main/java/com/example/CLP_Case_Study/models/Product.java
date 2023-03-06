@@ -1,6 +1,7 @@
 package com.example.CLP_Case_Study.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,8 @@ import java.util.List;
 
 /*@Data
 @NoArgsConstructor
-@AllArgsConstructor*/
+@AllArgsConstructor
+@Builder*/
 @Entity
 @Table(name="products")
 @Component
@@ -27,11 +29,13 @@ public class Product {
     private String productType;
     @Column(nullable=false)
     private String productDescription;
+    //@Builder.Default
     @Column(nullable=false)
     private double price = 0.00;
     @Column(nullable=false)
     private String imageUrl;
 
+    //@Builder.Default
     @ManyToMany(mappedBy = "products")
     private List<Order> orders = new ArrayList<>();
 
