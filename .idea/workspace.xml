@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="refactor folders">
+      <change beforePath="$PROJECT_DIR$/logback.log" beforeDir="false" afterPath="$PROJECT_DIR$/logback.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/controllers/UserController.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="attemptingLombok" />
+        <entry key="$PROJECT_DIR$" value="beforeLombok" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="16cad477-7e28-404b-a518-d006822761e6" />
+        <option name="url" value="https://github.com/RebelWright/clp_case_study.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MW2wkZ9ouRRsov5OoloaTRJcfw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Revature/clp_case_study"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Revature\clp_case_study\clp_case_study\clp_case_study\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.CLP_Case_Study.advice" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.CLP_Case_Study.advice" />
+      <recent name="com.example.CLP_Case_Study.repositories" />
+      <recent name="com.example.CLP_Case_Study.controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ClpCaseStudyApplication">
+    <configuration name="ClpCaseStudyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.ClpCaseStudyApplication" />
+      <module name="CLP_Case_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.CLP_Case_Study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CLP_Case_Study in CLP_Case_Study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.CLP_Case_Study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.OrderRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderRepositoryTest.findByOrderIdAndUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.CLP_Case_Study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.OrderRepositoryTest" />
+      <option name="METHOD_NAME" value="findByOrderIdAndUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="repositories in CLP_Case_Study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ClpCaseStudyApplication" />
+        <item itemvalue="JUnit.repositories in CLP_Case_Study" />
+        <item itemvalue="JUnit.OrderRepositoryTest.findByOrderIdAndUser" />
+        <item itemvalue="JUnit.OrderRepositoryTest" />
+        <item itemvalue="JUnit.CLP_Case_Study in CLP_Case_Study" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="" />
+      <created>1677869290619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677869290619</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Testing done.">
+      <created>1677986089419</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677986089419</updated>
+    </task>
+    <task id="LOCAL-00002" summary="AWS set up and connected.">
+      <created>1678050948147</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678050948147</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Converted to WAR and packaged.">
+      <created>1678056502245</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678056502245</updated>
+    </task>
+    <task id="LOCAL-00004" summary="testing jenkins">
+      <created>1678066875189</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678066875189</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor folders">
+      <created>1678119519817</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678119519817</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Testing done." />
+    <MESSAGE value="Minor tweaks. Testing is wonky." />
+    <MESSAGE value="Lombok added. Products are returning null." />
+    <MESSAGE value="AWS set up and connected." />
+    <MESSAGE value="Converted to WAR and packaged." />
+    <MESSAGE value="testing jenkins" />
+    <MESSAGE value="refactor folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor folders" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/clp_case_study$CLP_Case_Study_in_CLP_Case_Study.ic" NAME="CLP_Case_Study in CLP_Case_Study Coverage Results" MODIFIED="1678027549665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/clp_case_study$ClpCaseStudyApplicationTests.ic" NAME="ClpCaseStudyApplicationTests Coverage Results" MODIFIED="1677982317454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.CLP_Case_Study.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/clp_case_study$ClpCaseStudyApplication.ic" NAME="ClpCaseStudyApplication Coverage Results" MODIFIED="1677975539101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.CLP_Case_Study.*</FILTER>
+    </SUITE>
+  </component>
+</project>
