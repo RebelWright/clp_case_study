@@ -1,0 +1,1 @@
+This is a case study application developed for Revature's Continous Learning Program. It is created with Spring Boot in the backend and using React for the frontend. It is my very first time setting up a CI/CD pipeline using Jenkins, Docker, and AWS.
