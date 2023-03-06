@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="AWS set up and connected.">
+    <list default="true" id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="Converted to WAR and packaged.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logback.log" beforeDir="false" afterPath="$PROJECT_DIR$/logback.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/ClpCaseStudyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/ClpCaseStudyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/ClpCaseStudyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/ClpCaseStudyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/controllers/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,17 +71,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/Wayne/Desktop/Revature Stuff/p2_stuff/backend/banking-backend"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Wayne/Desktop/Revature Stuff/p2_stuff/backend/banking-backend&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -122,12 +124,12 @@
       <module name="CLP_Case_Study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.CLP_Case_Study.repositories.*" />
+          <option name="PATTERN" value="com.example.CLP_Case_Study.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.repositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.repositories.OrderRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.OrderRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,12 +139,12 @@
       <module name="CLP_Case_Study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.CLP_Case_Study.repositories.*" />
+          <option name="PATTERN" value="com.example.CLP_Case_Study.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.repositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.repositories.OrderRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.OrderRepositoryTest" />
       <option name="METHOD_NAME" value="findByOrderIdAndUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -190,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678050948147</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Converted to WAR and packaged.">
+      <created>1678056502245</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678056502245</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +219,8 @@
     <MESSAGE value="Minor tweaks. Testing is wonky." />
     <MESSAGE value="Lombok added. Products are returning null." />
     <MESSAGE value="AWS set up and connected." />
-    <option name="LAST_COMMIT_MESSAGE" value="AWS set up and connected." />
+    <MESSAGE value="Converted to WAR and packaged." />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted to WAR and packaged." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

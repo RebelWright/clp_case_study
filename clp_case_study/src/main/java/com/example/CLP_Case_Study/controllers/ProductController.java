@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/products")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5000","http:://clp-case-study.cgzyfd7qztjb.us-east-2.rds.amazonaws.com"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5000","http://clp-case-study.cgzyfd7qztjb.us-east-2.rds.amazonaws.com"}, allowCredentials = "true")
 public class ProductController {
 
     private final ProductService productService;

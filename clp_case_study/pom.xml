@@ -17,6 +17,7 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -49,8 +50,6 @@
 			<version>4.6.1</version>
 			<scope>test</scope>
 		</dependency>
-
-
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-junit-jupiter</artifactId>
@@ -77,6 +76,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>clp_case_study</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
