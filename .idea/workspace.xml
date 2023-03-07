@@ -4,9 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="refactor folders">
+    <list default="true" id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="testing pipeline">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logback.log" beforeDir="false" afterPath="$PROJECT_DIR$/logback.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/repositories/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study.war.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/controllers/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/controllers/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/classes/com/example/CLP_Case_Study/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-autoconfigure-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-autoconfigure-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-aop-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-aop-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-data-jpa-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-data-jpa-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-jdbc-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-jdbc-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-json-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-json-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-logging-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-logging-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-tomcat-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-tomcat-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-web-2.7.10-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/clp_case_study/WEB-INF/lib/spring-boot-starter-web-2.7.10-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.ClpCaseStudyApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.ClpCaseStudyApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.advice.AuthAspectTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.advice.AuthAspectTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.advice.RestExceptionHandlerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.advice.RestExceptionHandlerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.controllers.AuthControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.controllers.AuthControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.controllers.OrderControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.controllers.OrderControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.controllers.ProductControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.controllers.ProductControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.controllers.UserControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.controllers.UserControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.repositories.OrderRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.repositories.OrderRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.repositories.ProductRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.repositories.ProductRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.repositories.UserRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.repositories.UserRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.services.AuthServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.services.AuthServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.services.OrderServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.services.OrderServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.services.ProductServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.services.ProductServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.services.UserServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.CLP_Case_Study.services.UserServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.ClpCaseStudyApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.ClpCaseStudyApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.advice.AuthAspectTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.advice.AuthAspectTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.advice.RestExceptionHandlerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.advice.RestExceptionHandlerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.controllers.AuthControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.controllers.AuthControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.controllers.OrderControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.controllers.OrderControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.controllers.ProductControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.controllers.ProductControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.controllers.UserControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.controllers.UserControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.repositories.OrderRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.repositories.OrderRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.repositories.ProductRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.repositories.ProductRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.repositories.UserRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.repositories.UserRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.services.AuthServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.services.AuthServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.services.OrderServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.services.OrderServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.services.ProductServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.services.ProductServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.services.UserServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.CLP_Case_Study.services.UserServiceTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +146,7 @@
       <recent name="com.example.CLP_Case_Study.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClpCaseStudyApplication">
+  <component name="RunManager" selected="JUnit.CLP_Case_Study in CLP_Case_Study">
     <configuration name="ClpCaseStudyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.ClpCaseStudyApplication" />
       <module name="CLP_Case_Study" />
@@ -116,21 +168,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLP_Case_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.CLP_Case_Study.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.repositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.OrderRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OrderRepositoryTest.findByOrderIdAndUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLP_Case_Study" />
       <extension name="coverage">
@@ -147,6 +184,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.example.CLP_Case_Study in CLP_Case_Study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.CLP_Case_Study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="repositories in CLP_Case_Study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLP_Case_Study" />
       <option name="TEST_OBJECT" value="directory" />
@@ -157,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CLP_Case_Study in CLP_Case_Study" />
+        <item itemvalue="JUnit.com.example.CLP_Case_Study in CLP_Case_Study" />
         <item itemvalue="Application.ClpCaseStudyApplication" />
         <item itemvalue="JUnit.repositories in CLP_Case_Study" />
         <item itemvalue="JUnit.OrderRepositoryTest.findByOrderIdAndUser" />
-        <item itemvalue="JUnit.OrderRepositoryTest" />
-        <item itemvalue="JUnit.CLP_Case_Study in CLP_Case_Study" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678119519817</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="testing pipeline">
+      <created>1678133070884</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678133070884</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,7 +290,8 @@
     <MESSAGE value="Converted to WAR and packaged." />
     <MESSAGE value="testing jenkins" />
     <MESSAGE value="refactor folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor folders" />
+    <MESSAGE value="testing pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing pipeline" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -245,7 +304,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/clp_case_study$CLP_Case_Study_in_CLP_Case_Study.ic" NAME="CLP_Case_Study in CLP_Case_Study Coverage Results" MODIFIED="1678027549665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/clp_case_study$CLP_Case_Study_in_CLP_Case_Study.ic" NAME="CLP_Case_Study in CLP_Case_Study Coverage Results" MODIFIED="1678149337335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/clp_case_study$ClpCaseStudyApplicationTests.ic" NAME="ClpCaseStudyApplicationTests Coverage Results" MODIFIED="1677982317454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.CLP_Case_Study.*</FILTER>
     </SUITE>
