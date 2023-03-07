@@ -6,8 +6,10 @@ import com.example.CLP_Case_Study.models.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 
+import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @ActiveProfiles("test")
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
 public class OrderRepositoryTest {
 
     @Autowired
@@ -26,7 +29,10 @@ public class OrderRepositoryTest {
     private ProductRepository productRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private EntityManager entityManager;
 
+    //Test passes when run individually. Fails as part of test suite.
     //@Test
     public void findByOrderIdAndUser() {
         // Create a test user
@@ -37,6 +43,7 @@ public class OrderRepositoryTest {
         productRepository.save(product);
         List<Product> products = new ArrayList<>();
         products.add(product);
+        entityManager.flush();
 
         // Create a test order
         Order order = new Order(1,products,10.0,user);
@@ -55,7 +62,8 @@ public class OrderRepositoryTest {
     @Test
     public void saveOrderTestSuccess() {
         User user = new User(1,"test@gmail.com", "password", "John", "Doe", "https://flag.com");
-        Product product1 = new Product("Product 1","Type A","Description A", 10.99, "image.com");
+        Product product1 = new Product(1,"Product 1","Type A","Description A", 10.99, "image.com");
+        productRepository.save(product1);
         List<Product> products = new ArrayList<>();
         products.add(product1);
         Order order = new Order(1,products,10.00, user);

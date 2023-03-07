@@ -56,7 +56,7 @@ public class OrderService implements OrderServiceInterface {
     }
 
 
-    @Transactional
+    /*@Transactional
     public Order deleteProductFromOrder(Order order, Product product) {
         List<Product> productList = new ArrayList<>(order.getProducts());
         if (productList.remove(product)) { // check if product is not null before removing
@@ -67,6 +67,15 @@ public class OrderService implements OrderServiceInterface {
         } else {
             throw new IllegalArgumentException("Product is null");
         }
+    }*/
+    @Transactional
+    public Order deleteProductFromOrder(Order order, Product product) {
+        List<Product> productList = new ArrayList<>(order.getProducts());
+        productList.remove(product);  // check if product is not null before removing
+        order.setProducts(productList);
+        order.setOrderAmount(order.getOrderAmount() - product.getPrice());
+        Order updatedOrder = orderRepository.save(order);
+        return updatedOrder;
     }
 
 }

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.example.CLP_Case_Study.controllers.ProductControllerTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.231 s - in com.example.CLP_Case_Study.controllers.ProductControllerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.511 s - in com.example.CLP_Case_Study.controllers.ProductControllerTest
