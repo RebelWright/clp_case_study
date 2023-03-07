@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="testing pipeline">
+    <list default="true" id="4d8d69b4-7572-4a00-add5-68bb3c8ff1ac" name="Changes" comment="lombok added and tested!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logback.log" beforeDir="false" afterPath="$PROJECT_DIR$/logback.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/dtos/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/dtos/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/dtos/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/dtos/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CLP_Case_Study/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/OrderRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/OrderRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study/repositories/ProductRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/dtos/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/dtos/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/dtos/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/dtos/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/services/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/CLP_Case_Study/services/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/repositories/OrderRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/repositories/OrderRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/repositories/ProductRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/repositories/ProductRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/repositories/UserRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/CLP_Case_Study/repositories/UserRepositoryTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,7 @@
       <recent name="com.example.CLP_Case_Study.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CLP_Case_Study in CLP_Case_Study">
+  <component name="RunManager" selected="JUnit.OrderRepositoryTest.findByOrderIdAndUser">
     <configuration name="ClpCaseStudyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.ClpCaseStudyApplication" />
       <module name="CLP_Case_Study" />
@@ -120,6 +123,22 @@
       <module name="CLP_Case_Study" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/src/test/java/com/example/CLP_Case_Study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderRepositoryTest.findByOrderIdAndUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLP_Case_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.CLP_Case_Study.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.CLP_Case_Study.repositories.OrderRepositoryTest" />
+      <option name="METHOD_NAME" value="findByOrderIdAndUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,27 +175,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.example.CLP_Case_Study in CLP_Case_Study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLP_Case_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.CLP_Case_Study.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.CLP_Case_Study" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderRepositoryTest.findByOrderIdAndUser" />
         <item itemvalue="JUnit.CLP_Case_Study in CLP_Case_Study" />
         <item itemvalue="JUnit.ProductRepositoryTest.findAllByProductTypeSuccess" />
         <item itemvalue="JUnit.OrderRepositoryTest.saveOrderTestSuccess" />
         <item itemvalue="Application.ClpCaseStudyApplication" />
-        <item itemvalue="JUnit.com.example.CLP_Case_Study in CLP_Case_Study" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678150169886</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lombok added and tested!">
+      <created>1678207366804</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678207366804</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,7 +274,8 @@
     <MESSAGE value="testing jenkins" />
     <MESSAGE value="refactor folders" />
     <MESSAGE value="testing pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing pipeline" />
+    <MESSAGE value="lombok added and tested!" />
+    <option name="LAST_COMMIT_MESSAGE" value="lombok added and tested!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

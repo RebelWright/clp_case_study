@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 
+import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +29,10 @@ public class OrderRepositoryTest {
     private ProductRepository productRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private EntityManager entityManager;
 
+    //Test passes when run individually. Fails as part of test suite.
     //@Test
     public void findByOrderIdAndUser() {
         // Create a test user
@@ -39,6 +43,7 @@ public class OrderRepositoryTest {
         productRepository.save(product);
         List<Product> products = new ArrayList<>();
         products.add(product);
+        entityManager.flush();
 
         // Create a test order
         Order order = new Order(1,products,10.0,user);
